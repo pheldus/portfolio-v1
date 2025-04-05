@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+    <style>
+        h1 {
+            display: block;
+            font-size: 2em;
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+            unicode-bidi: isolate;
+        }
+        p{
+            color: #ccc;
+            filter: blur(0.30px);
+        }
+        .blogs{
+            flex-wrap: wrap;
+        }
+        .blog{
+            border-radius: 10px;
+            background-color: rgb(29, 29, 29, 50%);
+        }
+        .blog + .blog {
+            margin-top: 20px;
+        }
+        .blogitems{
+            display: flex;
+        }
+        .blogcontent{
+            flex-wrap: wrap;
+        }
+        .content{
+            flex-wrap: wrap;
+        }
+        
+    </style>
+<body class="bg-black">  
+    <div class="container" style="display: flex; margin-left: 0; margin-right: auto;">
+        <%- include('./partials/sidebar') %>
+        <div class="content p-5">
+            <h1 class="text-white"><%=title  %></h1>
+            <div class="blogs">
+                <% blogs.forEach(blog => { %>
+                    <% if (blog.onay) { %>
+                        <%- include('./partials/blog-card',blog) %>
+                    <% } %>
+                <% }) %>
+            </div>
+        </div>
+    </div>  
+</body>
+</html>

@@ -1,0 +1,21 @@
+<style>
+    @media (max-width: 768px) {
+            .blogitems{
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-wrap: wrap; 
+            }
+        }
+</style>
+<a href="/blog/blog-details/<%=blogid %>" style="text-decoration: none;">
+    <div class="blog border border-dark">
+        <div class="blogitems">
+            <img src="/static/images/<%=resim  %>" alt="Blog Resmi" width="100px" height="100px" style="color: white; margin-top: 20px; margin-left: 10px;">
+                <div class="blogcontent p-2">
+                <h1 class="title text-white"><%=baslik %></h1>
+                <p class="desc" style="color: #ccc;"><%=ozet %></p>
+            </div>
+        </div>    
+    </div>
+</a>

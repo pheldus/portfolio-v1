@@ -1,0 +1,38 @@
+.stacks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+}
+.stack-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background-color: rgb(29, 29, 29, 50%);
+    border-radius: 10px;
+    min-width: 300px;
+    min-height: 350px;
+    margin-left: 0;
+}
+.stack-item img, .stack-item svg {
+    width: 100px;
+    height: auto;
+}
+
+
+@media (max-width: 768px) {
+    .stacks{
+        flex-wrap: wrap; 
+    }
+    .stack-item {
+        min-width: 0px;
+        min-height: 0px;
+        width: 90%; 
+        margin-left: 0; 
+    }
+}
